@@ -1,0 +1,238 @@
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+	.carousel-inner img {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:400px;
+
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: 500px;
+	
+}
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  
+
+/* animation domination */
+.three-d {
+	perspective: 200px;
+	transition: all .07s linear;
+	position: relative;
+	cursor: pointer;
+}
+	/* complete the animation! */
+	.three-d:hover .three-d-box, 
+	.three-d:focus .three-d-box {
+		transform: translateZ(-25px) rotateX(90deg);
+	}
+
+.three-d-box {
+	transition: all .3s ease-out;
+	transform: translatez(-25px);
+	transform-style: preserve-3d;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* 
+	put the "front" and "back" elements into place with CSS transforms, 
+	specifically translation and translatez
+*/
+.front {
+	transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+	transform: rotatex(-90deg) translatez(25px);
+	color: #ffe7c4;
+}
+
+.front, .back {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: black;
+	padding: 15px 10px;
+	color: white;
+	pointer-events: none;
+	box-sizing: border-box;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+@media screen and (max-width:500px) {
+.websitee {
+	display:none;
+}
+
+}
+@media screen and (min-width:480px) {
+.mobile {
+	display:none;
+}
+
+}
+
+.rainbow {
+	font-size:28px;
+-webkit-animation:rainbow 1s infinite;
+-ms-animation:rainbow 1s infinite;
+-o-animation:rainbow 1s infinite;
+animation:rainbow 1s infinite;
+}
+@-webkit-keyframes rainbow {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+@-ms-keyframes rainbow {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+@-o-keyframes rainbow {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+@keyframes rainbow {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+.rainbow:hover {
+	color:white;
+	font-size:28px;
+}
+
+.rainbow1 {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+ 
