@@ -94,20 +94,23 @@ $( function() {
 }
 .jumbotron{
 margin-bottom: 0px;
-    background-image: url(1.png);
+    background-image: url(country.png);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #84735A;
+    color: black;
+    
     text-shadow: black 0.5em 0.5em 0.5em;
 
 }
+
+
 </style>
 
 <?php
 $url = json_decode(file_get_contents("http://api.ipinfodb.com/v3/ip-city/?key=2b3d7d0ad1a285279139487ce77f3f58d980eea9546b5ccc5d08f5ee62ce7471&ip=183.83.21.94&format=json"));
-
-echo "<table border='1' width='50%' align='center'><tr><td>COUNTRY:</td><td>";
+?>
+<!--echo "<table border='1' width='50%' align='center'><tr><td>COUNTRY:</td><td>";
 echo $url->countryName;
 echo "</td></tr><tr><td>CITY:</td><td>";
 echo $url->cityName;
@@ -123,44 +126,48 @@ echo "</td></tr><tr><td>LONGITUDE:</td><td>";
 echo $url->longitude;
 echo "</td></tr><tr><td>TIMEZONE:</td><td>";
 echo $url->timeZone;
-echo "</td></tr><tr></table>";
-?>
+echo "</td></tr><tr></table>";-->
+
 <div>
   <h1 align="center"><bold><font color="#FF00FF">Searching the placements in each and every college</font></bold></h1>  
 </div>
 <hr>
 <div class="jumbotron">
+
 <div id="form-content">
-<div id="form">
+
       <div class="col-xs-3">
         <div class="ui-widget">
-  		<label for="country">Country: </label>
-  		<input id="country" name="country" onkeypress="myEnter(event)">
+  		<label for="country" style="color:white;">Country: </label>
+  		<input id="country" name="country" value="<?php echo $url->countryName; ?> ">
 
 	</div>
       </div>
       <div class="col-xs-3">
         <div class="ui-widget">
-  		<label for="state">State: </label>
-  		<input id="states" name="states" >
+  		<label for="state" style="color:white;">State: </label>
+  		<input id="states" name="states" value="<?php echo $url->regionName; ?>">
 	</div>
       </div>
       <div class="col-xs-3">
         <div class="ui-widget">
-  		<label for="district">District: </label>
-  		<input id="district" name="district">
+  		<label for="district" style="color:white;">District: </label>
+  		<input id="district" name="district" >
 	</div>
       </div>
 <div class="col-xs-3">
         <div class="ui-widget">
-  		<label for="branch">Branch: </label>
+  		<label for="branch" style="color:white;">Branch: </label>
   		<input id="branch" name="branch">
 <button type="Submit" id="submit" name="submit" class="hidden" >Submit</button>
   <button type="Reset" onclick="ClearFields();" class="btn-xs btn-primary">Reset</button>
 
-	</div>
+
+</div></div>
+	
   
 </div>
+
 <script>
 
 $('#india').keypress(function (e) {
